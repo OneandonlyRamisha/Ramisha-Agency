@@ -1,0 +1,413 @@
+.plans-section{
+    background-color: #1B2A49;
+    padding-bottom: 10rem;
+}
+
+.plans-header{
+    color: #00A9E0;
+    padding-top: 4.8rem;
+    text-align: center;
+    font-size: 4.8rem;
+}
+
+
+.plans-subheading{
+    color: #00A9E0;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.4rem;
+    margin-bottom: 3.6rem;
+}
+.header-flex{
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    align-content: center;
+}
+.discount{
+    border: #00A9E0 0.2rem solid;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10000rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.header-flex h3{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.bub-heading{
+    color: #fff;
+    margin-top: 1.4rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.plans-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 15rem repeat(8, 7rem);
+    align-items: center;
+    padding-top: 6.4rem;
+}
+
+.mobile-version-plans{
+    display: none;
+}
+
+
+
+.header-plans{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.plan-prices{
+    font-size: 3.6rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.plans{
+    text-align: center;
+    gap: 2rem;
+}
+
+.plan-button,
+.plan-button:link,
+.plan-button:visited{
+    font-size: 1.8rem;
+    background-color: #00A9E0;
+    color: #fff;
+    padding: 1rem 3rem;
+    margin-top: 5rem;
+    border-radius: 100rem;
+    transition: all 0.4s;
+    font-weight: 700;
+    
+}
+
+.plan-button:hover{
+    color: #00A9E0;
+    background-color: #fff;
+}
+
+.plans-items{
+    color: #fff;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+}
+
+.includes-not{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.tick{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.small-sub{
+    font-size: 1rem;
+}
+
+
+@media (max-width: 1300px){
+    .header-flex h3{
+        font-size: 1.4rem;
+    }
+    .bub-heading{
+        font-size: 0.9rem;
+    }
+    .header-plans{
+        font-size: 1.5rem;
+    }
+    .plan-prices{
+        font-size: 3.5rem;
+    }
+    .plan-button,
+    .plan-button:link,
+    .plan-button:visited{
+        font-size: 1.4rem;
+    }
+    .plans-items{
+        font-size: 1.4rem;
+    }
+    .includes-not{
+        font-size: 1.4rem;
+    }
+    .tick{
+        font-size: 1.4rem;
+    }
+
+    .section-margin-padding{
+        padding-left: 3.6rem;
+        padding-right: 3.6rem;
+    }
+    .plans-container{
+        padding-top: 0rem;
+    }
+}
+
+@media (max-width: 1070px){
+    .header-flex h3{
+        font-size: 1.2rem;
+    }
+    .bub-heading{
+        font-size: 1.2rem;
+    }
+    .plan-button,
+    .plan-button:link,
+    .plan-button:visited{
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
+@media (max-width: 1000px) {
+    .header-flex h3, .discount, .bub-heading{
+        font-size: 1rem;
+    }
+
+    .plans-items, .includes-not, .tick{
+        font-size: 1.1rem;
+    }
+
+    .small-sub{
+        font-size: 0.7rem;
+    }
+
+    .plans-header{
+        font-size: 3.6rem;
+    }
+
+    .plans-subheading{
+        font-size: 1.8rem;
+    }
+
+    
+    
+}
+
+.mobile-version-plans{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile-plans-name{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.mobiles-prices{
+    text-align: center;
+}
+
+.mobile-cta{
+    font-size: 1rem;
+}
+.mobile-plans{
+    background-color: #243b5e ;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    
+    border-radius: 2rem;
+    padding: 1.5rem 4.5rem;
+    
+
+}
+
+
+.mobile-items-flex{
+    display: flex;
+    gap: 2.4rem;
+    
+    
+}
+
+.flex-gap{
+    margin-top: 4.6rem;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.mobile-version-plans{
+    display: none;
+}
+
+.mobile-plans-name{
+    color: #fff ;
+    font-size: 2.4rem;
+}
+.mobiles-prices{
+    color: #fff;
+    font-size: 5.4rem;
+    margin-bottom: 2.4rem;
+}
+.mobile-cta{
+    color: #fff;
+    background-color: #00A9E0;
+    padding: 1.5rem 6rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+    border-radius: 1000rem;
+    transition: all 0.4s;
+    
+}
+.mobile-items-flex h4{
+    color: #fff;
+    font-size: 1.6rem;
+    
+}
+
+.premiuma{
+    background-color: #fff;
+}
+
+.premiuma .mobile-cta{
+    background-color: #1B2A49;
+}
+
+.premiuma .mobile-plans-name, .premiuma .mobiles-prices, .premiuma .mobile-items-flex h4{
+    color: #1B2A49;
+
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .plans-container{
+        display: none;
+    }
+
+    .mobile-version-plans{
+        display: flex;
+
+    }
+
+}
+
+
+@media (max-width: 600px){
+    .plans-header{
+        font-size: 2.3rem;
+    }
+    .plans-subheading{
+        font-size: 1.5rem;
+    }
+
+    .mobile-plans-name{
+        font-size: 1.8rem;
+    }
+    .mobiles-prices{
+        font-size: 4.8rem;
+    }
+
+    .mobile-cta{
+        font-size: 1.6rem;
+        padding: 1.5rem 4.5rem;
+    }
+
+    .mobile-items-flex h4{
+        color: #fff;
+        font-size: 1.2rem;
+        
+    }
+
+    
+
+
+}
+
+.new-line-br{
+    display: none;
+}
+
+@media (max-width: 435px) {
+    .mobile-version-plans{
+        margin-bottom: 10rem;
+    }
+    
+}
+
+@media (max-width: 410px) {
+
+    .plans-subheading{
+        display: none;
+    }
+
+    .new-line-br{
+        display: block;
+    }
+
+    .plans-header{
+        margin-bottom: 3rem;
+    }
+    
+    
+}
+
+@media (max-width: 350px) {
+
+    .section-margin-padding-plans{
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    .mobile-plans{
+        padding: 1rem 2rem;
+    }
+
+    .plan-prices{
+        font-size: 10rem;
+    }
+
+    .mobile-cta{
+        font-size: 1rem;
+        padding: 1rem 3rem;
+    }
+
+    .mobile-items-flex h4{
+        color: #fff;
+        font-size: 0.81rem;
+
+        
+    }
+
+    .mobiles-prices{
+        font-size: 3rem;
+    }
+    .flex-gap{
+        margin-top: 3rem;
+    }
+    
+    .plans-header{
+        font-size: 2.1rem;
+    }
+}
+
+.mobile-cta:hover{
+    background-color: #fff;
+    color: #00A9E0;
+}
+
+.premiuma .mobile-cta:hover{
+    background-color: #00A9E0;
+    color: #fff;
+
+}
+
+.custom-mob-plan{
+    padding-bottom: 4.5rem;
+}
