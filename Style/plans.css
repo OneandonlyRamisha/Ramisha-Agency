@@ -9,6 +9,10 @@
   padding-bottom: 10rem;
 }
 
+.new-line-br {
+  display: none;
+}
+
 .plans-header {
   color: #00a9e0;
   padding-top: 4.8rem;
@@ -19,272 +23,283 @@
 .plans-subheading {
   color: #00a9e0;
   text-align: center;
+
   margin-top: 1rem;
   font-size: 2.4rem;
   margin-bottom: 3.6rem;
 }
-.header-flex {
-  display: flex;
-  gap: 0.7rem;
-  align-items: center;
-  align-content: center;
-}
-.discount {
-  border: #00a9e0 0.2rem solid;
-  padding: 0.5rem 1.5rem;
-  border-radius: 10000rem;
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-.header-flex h3 {
-  color: #fff;
-  font-size: 1.8rem;
-}
-
-.bub-heading {
-  color: #fff;
-  margin-top: 1.4rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
 
 .plans-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 15rem repeat(8, 7rem);
+  display: flex;
   align-items: center;
-  padding-top: 6.4rem;
+  gap: 4.8rem;
+  justify-content: center;
 }
 
-.mobile-version-plans {
-  display: none;
+.plans-div {
+  padding: 2rem 4.5rem;
+  border-radius: 3rem;
+  margin-top: 3.8rem;
+  border: none;
+  outline: none;
+  cursor: inherit;
+  position: relative;
+  z-index: 0;
+  max-width: 45rem;
 }
 
-.header-plans {
-  font-size: 2rem;
-  text-align: center;
-  color: #fff;
+.plans-div:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingplans-div 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
-.plan-prices {
-  font-size: 3.6rem;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 2rem;
+@keyframes glowingplans-div {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
-.plans {
-  text-align: center;
-  gap: 2rem;
+.plans-div:hover:before {
+  opacity: 1;
 }
 
-.plan-button,
-.plan-button:link,
-.plan-button:visited {
-  font-size: 1.8rem;
-  background-color: #00a9e0;
-  color: #fff;
-  padding: 1rem 3rem;
-  margin-top: 5rem;
-  border-radius: 100rem;
-  transition: all 0.4s;
-  font-weight: 700;
+.plans-div:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
-.plan-button:hover {
-  color: #00a9e0;
+.landing-page-plan {
+  background-color: #243b5e;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sales-flow-plan {
   background-color: #fff;
 }
 
-.plans-items {
-  color: #fff;
-  margin-left: 2rem;
-  font-size: 1.8rem;
+.plans-heading {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+}
+.plans-sub-heading {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+  padding-bottom: 1rem;
 }
 
-.includes-not {
+.plans-cta {
+  font-size: 2.4rem;
+  font-weight: 700;
+  display: block;
   text-align: center;
+  margin-top: 4.5rem;
+  margin-bottom: 2.4rem;
+}
+
+.mobile-items-flex {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.mobile-items-flex h4 {
   font-size: 1.8rem;
+  font-weight: 600;
+  padding-top: 1.4rem;
+}
+
+.sales-flow-plan h4,
+.sales-flow-plan .plans-sub-heading,
+.sales-flow-plan .plans-heading {
+  color: #1b2a49;
+}
+
+.sales-flow-plan .plans-sub-heading {
+  border-bottom: 3px solid #1b2a49;
+}
+.plans-cta {
+  padding: 1rem 3rem;
+}
+.sales-flow-plan .plans-cta {
+  color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.sales-flow-plan .plans-cta:focus {
+  outline: none;
+}
+
+.sales-flow-plan .plans-cta:hover {
+  /* background-color: #fff;
+  color: #00a9e0; */
+
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.landing-page-plan .plans-heading,
+.landing-page-plan .plans-sub-heading,
+.landing-page-plan h4 {
   color: #fff;
 }
 
-.tick {
-  font-size: 2rem;
-  color: #fff;
+.landing-page-plan .plans-sub-heading {
+  border-bottom: 3px solid #fff;
 }
 
-.small-sub {
-  font-size: 1rem;
+.landing-page-plan .plans-cta {
+  color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
-@media (max-width: 1300px) {
-  .header-flex h3 {
-    font-size: 1.4rem;
+.landing-page-plan .plans-cta:focus {
+  outline: none;
+}
+
+.landing-page-plan .plans-cta:hover {
+  /* background-color: #fff;
+  color: #00a9e0; */
+
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media (max-width: 1060px) {
+  .plans-container {
+    flex-direction: column;
+    gap: 0rem;
   }
-  .bub-heading {
-    font-size: 0.9rem;
+  .plans-subheading {
+    margin-bottom: 0;
   }
-  .header-plans {
-    font-size: 1.5rem;
-  }
-  .plan-prices {
+}
+@media (max-width: 840px) {
+  .plans-header {
     font-size: 3.5rem;
   }
-  .plan-button,
-  .plan-button:link,
-  .plan-button:visited {
-    font-size: 1.4rem;
-  }
-  .plans-items {
-    font-size: 1.4rem;
-  }
-  .includes-not {
-    font-size: 1.4rem;
-  }
-  .tick {
-    font-size: 1.4rem;
-  }
-
-  .section-margin-padding {
-    padding-left: 3.6rem;
-    padding-right: 3.6rem;
-  }
-  .plans-container {
-    padding-top: 0rem;
+  .plans-subheading {
+    font-size: 1.8rem;
   }
 }
 
-@media (max-width: 1070px) {
-  .header-flex h3 {
+@media (max-width: 617px) {
+  .plans-header {
+    font-size: 4.8rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .plans-div .mobile-items-flex h4 {
+    font-size: 1.4rem;
+  }
+  .plans-sub-heading {
     font-size: 1.2rem;
   }
-  .bub-heading {
-    font-size: 1.2rem;
+  .plans-header {
+    font-size: 3rem;
   }
-  .plan-button,
-  .plan-button:link,
-  .plan-button:visited {
-    font-size: 1.2rem;
+  .plans-subheading {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 435px) {
+  .section-margin-padding {
+    padding-left: 2.4rem !important;
+    padding-right: 2.4rem !important;
+  }
+  .plans-div {
     padding: 0.5rem 1.5rem;
   }
+  .plans-cta {
+    font-size: 1.8rem;
+  }
 }
+
 @media (max-width: 1000px) {
-  .header-flex h3,
-  .discount,
-  .bub-heading {
-    font-size: 1rem;
-  }
-
-  .plans-items,
-  .includes-not,
-  .tick {
-    font-size: 1.1rem;
-  }
-
-  .small-sub {
-    font-size: 0.7rem;
-  }
-
   .plans-header {
     font-size: 3.6rem;
   }
 
   .plans-subheading {
     font-size: 1.8rem;
-  }
-}
-
-.mobile-version-plans {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  align-items: center;
-  flex-direction: column;
-}
-
-.mobile-plans-name {
-  font-size: 2.4rem;
-  text-align: center;
-}
-
-.mobiles-prices {
-  text-align: center;
-}
-
-.mobile-cta {
-  font-size: 1rem;
-}
-.mobile-plans {
-  background-color: #243b5e;
-  text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
-
-  border-radius: 2rem;
-  padding: 1.5rem 4.5rem;
-}
-
-.mobile-items-flex {
-  display: flex;
-  gap: 2.4rem;
-}
-
-.flex-gap {
-  margin-top: 4.6rem;
-  flex-direction: column;
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 3rem;
-}
-
-.mobile-version-plans {
-  display: none;
-}
-
-.mobile-plans-name {
-  color: #fff;
-  font-size: 2.4rem;
-}
-.mobiles-prices {
-  color: #fff;
-  font-size: 5.4rem;
-  margin-bottom: 2.4rem;
-}
-.mobile-cta {
-  color: #fff;
-  background-color: #00a9e0;
-  padding: 1.5rem 6rem;
-  font-size: 2.4rem;
-  font-weight: 600;
-  border-radius: 1000rem;
-  transition: all 0.4s;
-}
-.mobile-items-flex h4 {
-  color: #fff;
-  font-size: 1.6rem;
-}
-
-.premiuma {
-  background-color: #fff;
-}
-
-.premiuma .mobile-cta {
-  background-color: #1b2a49;
-}
-
-.premiuma .mobile-plans-name,
-.premiuma .mobiles-prices,
-.premiuma .mobile-items-flex h4 {
-  color: #1b2a49;
-}
-
-@media screen and (max-width: 900px) {
-  .plans-container {
-    display: none;
-  }
-
-  .mobile-version-plans {
-    display: flex;
   }
 }
 
@@ -295,33 +310,6 @@
   .plans-subheading {
     font-size: 1.5rem;
   }
-
-  .mobile-plans-name {
-    font-size: 1.8rem;
-  }
-  .mobiles-prices {
-    font-size: 4.8rem;
-  }
-
-  .mobile-cta {
-    font-size: 1.6rem;
-    padding: 1.5rem 4.5rem;
-  }
-
-  .mobile-items-flex h4 {
-    color: #fff;
-    font-size: 1.2rem;
-  }
-}
-
-.new-line-br {
-  display: none;
-}
-
-@media (max-width: 435px) {
-  .mobile-version-plans {
-    margin-bottom: 10rem;
-  }
 }
 
 @media (max-width: 410px) {
@@ -329,61 +317,7 @@
     display: none;
   }
 
-  .new-line-br {
-    display: block;
-  }
-
   .plans-header {
     margin-bottom: 3rem;
   }
-}
-
-@media (max-width: 350px) {
-  .section-margin-padding-plans {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .mobile-plans {
-    padding: 1rem 2rem;
-  }
-
-  .plan-prices {
-    font-size: 10rem;
-  }
-
-  .mobile-cta {
-    font-size: 1rem;
-    padding: 1rem 3rem;
-  }
-
-  .mobile-items-flex h4 {
-    color: #fff;
-    font-size: 0.81rem;
-  }
-
-  .mobiles-prices {
-    font-size: 3rem;
-  }
-  .flex-gap {
-    margin-top: 3rem;
-  }
-
-  .plans-header {
-    font-size: 2.1rem;
-  }
-}
-
-.mobile-cta:hover {
-  background-color: #fff;
-  color: #00a9e0;
-}
-
-.premiuma .mobile-cta:hover {
-  background-color: #00a9e0;
-  color: #fff;
-}
-
-.custom-mob-plan {
-  padding-bottom: 4.5rem;
 }
