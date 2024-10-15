@@ -2,7 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const navmMenu = document.querySelector(".navigation-ul");
 const navLink1 = document.querySelector(".nav-items-link1");
 const navLink2 = document.querySelector(".nav-items-link2");
-// const navLink3 = document.querySelector('.nav-items-link3')
+const navLink3 = document.querySelector(".nav-items-link3");
 const navLink4 = document.querySelector(".nav-items-link4");
 const navLink5 = document.querySelector(".nav-items-link5");
 const valuesDisplay = document.querySelector(".values");
@@ -13,6 +13,37 @@ const qualitiesDisplay = document.querySelector(".qualities");
 const qualitiesText = document.querySelector(".qualities-text");
 const numbersDisplay = document.querySelector(".numbers");
 const numbersText = document.querySelector(".numbers-text");
+const faqdropdown = document.querySelector(".question-tick");
+const answer = document.querySelector(".answer");
+const questionOne = document.querySelector(".question-tick-one");
+const answerOne = document.querySelector(".answer-one");
+const questiontwo = document.querySelector(".question-tick-two");
+const answertwo = document.querySelector(".answer-two");
+const questionthree = document.querySelector(".question-tick-three");
+const answerthree = document.querySelector(".answer-three");
+const questionfour = document.querySelector(".question-tick-four");
+const answerfour = document.querySelector(".answer-four");
+
+faqdropdown.addEventListener("click", () => {
+  answer.classList.toggle("active");
+  faqdropdown.classList.toggle("active");
+});
+questionOne.addEventListener("click", () => {
+  answerOne.classList.toggle("active");
+  questionOne.classList.toggle("active");
+});
+questiontwo.addEventListener("click", () => {
+  answertwo.classList.toggle("active");
+  questiontwo.classList.toggle("active");
+});
+questionthree.addEventListener("click", () => {
+  answerthree.classList.toggle("active");
+  questionthree.classList.toggle("active");
+});
+questionfour.addEventListener("click", () => {
+  answerfour.classList.toggle("active");
+  questionfour.classList.toggle("active");
+});
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -32,12 +63,11 @@ navLink2.addEventListener("click", () => {
   hamburger.classList.remove("active");
 });
 
-// navLink3.addEventListener("click", () =>{
-//     navmMenu.classList.remove("active")
-//     document.body.classList.remove("no-scroll")
-//     hamburger.classList.remove("active")
-
-// });
+navLink3.addEventListener("click", () => {
+  navmMenu.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+  hamburger.classList.remove("active");
+});
 
 navLink4.addEventListener("click", () => {
   navmMenu.classList.remove("active");
