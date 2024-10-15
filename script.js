@@ -27,22 +27,67 @@ const answerfour = document.querySelector(".answer-four");
 faqdropdown.addEventListener("click", () => {
   answer.classList.toggle("active");
   faqdropdown.classList.toggle("active");
+
+  answerOne.classList.remove("active");
+  questionOne.classList.remove("active");
+  answertwo.classList.remove("active");
+  questiontwo.classList.remove("active");
+  answerthree.classList.remove("active");
+  questionthree.classList.remove("active");
+  answerfour.classList.remove("active");
+  questionfour.classList.remove("active");
 });
 questionOne.addEventListener("click", () => {
   answerOne.classList.toggle("active");
   questionOne.classList.toggle("active");
+
+  answer.classList.remove("active");
+  faqdropdown.classList.remove("active");
+  answertwo.classList.remove("active");
+  questiontwo.classList.remove("active");
+  answerthree.classList.remove("active");
+  questionthree.classList.remove("active");
+  answerfour.classList.remove("active");
+  questionfour.classList.remove("active");
 });
 questiontwo.addEventListener("click", () => {
   answertwo.classList.toggle("active");
   questiontwo.classList.toggle("active");
+
+  answerOne.classList.remove("active");
+  questionOne.classList.remove("active");
+  answer.classList.remove("active");
+  faqdropdown.classList.remove("active");
+  answerthree.classList.remove("active");
+  questionthree.classList.remove("active");
+  answerfour.classList.remove("active");
+  questionfour.classList.remove("active");
 });
 questionthree.addEventListener("click", () => {
   answerthree.classList.toggle("active");
   questionthree.classList.toggle("active");
+
+  answerOne.classList.remove("active");
+  questionOne.classList.remove("active");
+  answertwo.classList.remove("active");
+  questiontwo.classList.remove("active");
+  answer.classList.remove("active");
+  faqdropdown.classList.remove("active");
+  answerfour.classList.remove("active");
+  questionfour.classList.remove("active");
 });
 questionfour.addEventListener("click", () => {
   answerfour.classList.toggle("active");
   questionfour.classList.toggle("active");
+
+  answerOne.classList.remove("active");
+  questionOne.classList.remove("active");
+  answertwo.classList.remove("active");
+  questiontwo.classList.remove("active");
+  answerthree.classList.remove("active");
+  questionthree.classList.remove("active");
+  answer.classList.remove("active");
+  faqdropdown.classList.remove("active");
 });
 
 hamburger.addEventListener("click", () => {
