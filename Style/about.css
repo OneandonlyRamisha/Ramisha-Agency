@@ -312,7 +312,7 @@
   margin-bottom: 2rem;
 }
 
-.numbers-grid {
+/* .numbers-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -338,9 +338,9 @@
     #3f86ed
   );
   box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
-}
+} */
 
-.numbers-grid div:hover {
+/* .numbers-grid div:hover {
   background-position: 100% 0;
   moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -356,6 +356,18 @@
   margin-top: 3rem;
   color: #fff;
   font-size: 1.6rem;
+} */
+
+.numbers-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 24, 32, 0.6);
+  object-fit: cover;
+}
+
+.carousel-img {
+  width: 100%; /* Set your desired width */
+  padding: 1.5rem 0rem;
 }
 
 @media (max-width: 1300px) {
